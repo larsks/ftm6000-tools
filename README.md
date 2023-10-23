@@ -36,6 +36,8 @@ Addresses are not written sequentially. The data is delivered in the following r
 
 This is followed by two blocks with addresses `0xfffd` and `0xfffe`. These addresses don't represent actual memory locations; presumably this is some sort of protocol metadata.
 
+It looks like the protocol is similar to that used by the [FTM 350](https://github.com/kk7ds/chirp/blob/master/chirp/drivers/ftm350.py).
+
 ## Memory layout
 
 - Channels appear to start at `0x800`, and occupy 16 bytes each. The frequency is stored in bytes 3 and 4 with a leading `0` for VHF and a leading `8` for VHF. I suspect this is a band identifier, but I have not verified that yet.
